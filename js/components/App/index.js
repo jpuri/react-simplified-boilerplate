@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class App extends Component {
-render() {
-    return (
-      <div>{ this.props.children }</div>
-    );
-  }
-}
+// Component with props and validation
+const Comp2 = (props) => <div>{ props.children }</div>;
+
+Comp2.propTypes = {
+  children: React.PropTypes.object.isRequired,
+};
+
+export default Comp2;

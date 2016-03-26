@@ -11,7 +11,7 @@ const routes = (
   <Route path="/" component={App}>
     <Route path="comp1" component={Comp1} />
     <Route path="comp2" component={Comp2} />
-    <IndexRoute component={Comp1}/>
+    <IndexRoute component={Comp1} />
   </Route>
 );
 

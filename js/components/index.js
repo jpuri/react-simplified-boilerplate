@@ -6,4 +6,4 @@ module.exports = {
   App,
   Comp1,
   Comp2,
-}
+};

@@ -8,7 +8,7 @@
 6. css-modules
 7. Test coverage using enzyme mocha sinonjs
 8. Better way to deal with index.html
-
 9. Normalize css
+
 10. ESLint
 11. Flow
