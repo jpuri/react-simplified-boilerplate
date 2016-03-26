@@ -2,14 +2,14 @@ var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var autoprefixer = require('autoprefixer');
 var precss       = require('precss');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: "source-map",
   entry: './js/index',
   output: {
-    path: path.join(__dirname, './dist'),
+    path: path.join(__dirname, '../static'),
     filename: 'bundle.js',
-    publicPath: '/dist/'
   },
   module: {
     loaders: [
@@ -24,6 +24,10 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('[name].css', {
       allChunks: true
+    }),
+    new HtmlWebpackPlugin({
+      template: 'index.html',
+      inject: true
     })
   ],
   postcss: function () {
