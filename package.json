@@ -1,6 +1,6 @@
 {
   "name": "react-minimal-boilerplate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A minimal setup for simple React applications.",
   "dependencies": {
     "immutable": "^3.7.6",
