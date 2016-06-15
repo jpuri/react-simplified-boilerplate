@@ -6,6 +6,7 @@
 .*/js/*
 
 [libs]
+./interfaces/mocha.js
 ./interfaces/CSSModule.js
 
 [options]

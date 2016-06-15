@@ -19,9 +19,9 @@ export default class Comp1 extends Component {
 
   render() {
     return (
-      <div className={ styles.root }>
-        <div>Comp-1, State: { this.state.status.toString() }</div>
-        <button onClick={ this.changeState }>Change state</button>
+      <div className={styles.root}>
+        <div>Comp-1, State: {this.state.status.toString()}</div>
+        <button onClick={this.changeState}>Change state</button>
       </div>
     );
   }
