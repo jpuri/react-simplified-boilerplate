@@ -1,34 +1,34 @@
-var path = require('path');
-var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var autoprefixer = require('autoprefixer');
-var precss       = require('precss');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+const precss = require('precss');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
   entry: [
-    './js/index'
+    './js/index',
   ],
   output: {
     path: path.join(__dirname, '../dist'),
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: '/',
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify('production')
-      }
+        NODE_ENV: JSON.stringify('production'),
+      },
     }),
     new webpack.optimize.UglifyJsPlugin({
       compressor: {
-        warnings: false
-      }
+        warnings: false,
+      },
     }),
     new ExtractTextPlugin('[name].css', {
-      allChunks: true
+      allChunks: true,
     }),
     new HtmlWebpackPlugin({
       template: './template/index.html',
@@ -42,9 +42,9 @@ module.exports = {
         keepClosingSlash: true,
         minifyJS: true,
         minifyCSS: true,
-        minifyURLs: true
+        minifyURLs: true,
       },
-      inject: true
+      inject: true,
     }),
   ],
   module: {
@@ -52,15 +52,16 @@ module.exports = {
       { test: /\.js$/, loader: 'babel-loader' },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[local]___[hash:base64:5]!postcss-loader'),
+        loader: ExtractTextPlugin.extract(
+          'style-loader',
+          'css-loader?modules&importLoaders=1&localIdentName=' +
+          '[local]___[hash:base64:5]!postcss-loader'),
       },
-      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' }
-    ]
+      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' },
+    ],
   },
-  postcss: function () {
-    return [autoprefixer, precss];
-  },
+  postcss: () => [autoprefixer, precss],
   resolve: {
-    extensions: ['', '.js', '.json']
-  }
+    extensions: ['', '.js', '.json'],
+  },
 };
