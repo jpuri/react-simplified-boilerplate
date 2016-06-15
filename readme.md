@@ -18,3 +18,9 @@ Other small tweaks I did for myself:
   1. In development mode all http requests with `/api` will be redirected to `http://localhost:8080`
   2. Added `normalize.css` to the project
   3. The project uses `/template/index.html` as template to create `index.html` in dev mode and during build
+
+To use boilerplate, follow  these steps:
+  1. git clone https://github.com/jpuri/react-minimal-boilerplate.git
+  2. rm -rf .git
+  3. npm install
+  4. npm start
