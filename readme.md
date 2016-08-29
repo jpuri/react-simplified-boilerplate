@@ -4,14 +4,14 @@ This will be a React Boilerplate for I have made for my react projects. Its insp
 I call it React Minimal Boilerplate as it has a minimal set of libraries, when it comes to adding a JavaScript library to my FrontEnd projects I deeply believe in: _If you do not need it do not use it_.
 
 Libraries included in the project:
-  1. React, React-DOM : 15.0
-  2. React-Router: 2.0.1
-  3. immutable: 3.7.6
-  3. Webpack: 1.12.14
+  1. React, React-DOM : 15.3.1
+  2. React-Router: 2.7.0
+  3. immutable: 3.8.1
+  3. Webpack: 1.13.2
   5. Babel: 6.x
   6. CSS-Modules for styling
-  7. Unit Test Coverage: enzyme:2.2.0, mocha:2.4.5, chai:3.5.0, sinonjs:1.17.3
-  8. ESLint: 2.5.1, using eslint-config-airbnb:7.0.0
+  7. Unit Test Coverage: enzyme:2.4.1, mocha:3.0.2, chai:3.5.0, sinonjs:1.17.5
+  8. ESLint: 3.4.0, using eslint-config-airbnb:10.0.0
   9. Flow: 0.22.1
 
 Other small tweaks I did for myself:
